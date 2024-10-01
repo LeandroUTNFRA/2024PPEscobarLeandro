@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Formulario de Datos -->
+    <div id="formDatos">
+        <fieldset>
+            <h2>Form Datos</h2>
+            <label for="filtrar">Filtrar Por:</label>
+            <select id="filtrar" onchange="dibujarDatosSegunSeleccion()">
+                <option value="todos">Todos</option>
+                <option value="terrestre">Terrestre</option>
+                <option value="aereo">Aereo</option>
+            </select>
+
+            <label for="velocidadPromedio">Promedio Velocidad Maxima:</label>
+            <input type="text" id="velocidadPromedio" placeholder="">
+
+            <button onclick="calcularVelocidad()">Calcular</button>
+
+            <br>
+
+            <label>Mostrar Columnas:</label>
+            <br>
+            <input type="checkbox" id= "checkid" checked>  ID
+            <input type="checkbox" id= "checkmodelo" checked> Modelo
+            <input type="checkbox" id= "checkanoFab" checked> Año fab
+            <input type="checkbox" id= "checkvelMax" checked> Vel max
+            <input type="checkbox" id= "checkaltMax" checked> Alt max
+            <input type="checkbox" id= "checkautonomia" checked> Autonomia
+            <input type="checkbox" id= "checkcantPue" checked> Cant pue
+            <input type="checkbox" id= "checkcantRue" checked> Cant Rue
+            <br><br>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th data-ordenar="id">ID</th>
+                        <th data-ordenar="modelo">Modelo</th>
+                        <th data-ordenar="anoFab">Año fab</th>
+                        <th data-ordenar="velMax">Vel max</th>
+                        <th data-ordenar="altMax">Alt max</th>
+                        <th data-ordenar="autonomia">Autonomia</th>
+                        <th data-ordenar="cantPue">Cant pue</th>
+                        <th data-ordenar="cantRue">Cant Rue</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaDatos">
+                    <tr>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <button id="btnAgregar" onclick="mostrarABM()">Agregar</button>
+        </fieldset>
+    </div>
+
+    <!-- Formulario ABM -->
+    <div id="formABM" style="display: none;">
+        <fieldset>
+            <h2>Formulario ABM</h2>
+
+            <label for="id">Id:</label>
+            <input class= "input_ABM" type="text" id="id" placeholder="" readonly>
+
+            <label for="modeloABM">Modelo:</label>
+            <input class= "input_ABM" type="text" id="modeloABM" placeholder="">
+
+            <label for="anoFabABM">Año Fabricacion:</label>
+            <input  class= "input_ABM" type="text" id="anoFabABM" placeholder="">
+
+            <label for="velMaxABM">Velocidad Maxima:</label>
+            <input class= "input_ABM" type="text" id="velMaxABM" placeholder="">
+
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" onchange="actualizarLabels(this.value)">
+                <option value="Aereo">Aereo</option>
+                <option value="Terrestre">Terrestre</option>
+            </select>
+
+            <label for="atributo5" id="labelAtributo5">Atributo5:</label>
+            <input class= "input_ABM" type="text" id="atributo5" placeholder="">
+
+            <label for="atributo6" id="labelAtributo6">Atributo 6:</label>
+            <input class= "input_ABM" type="text" id="atributo6" placeholder="">
+            
+
+            <br><br>
+
+            <button id= "Aceptar"onclick="aceptarABM()">Aceptar</button>
+            <button onclick="cancelarABM()">Cancelar</button>
+            <button id = "Modificar" onclick="modificarABM()">Modificar</button>
+            <button id ="Eliminar" onclick="eliminarABM()">Eliminar</button>
+        </fieldset>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

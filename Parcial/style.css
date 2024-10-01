@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+fieldset {
+    background-color: #ededed;
+    padding: 10px 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0px 0px 25px #0007;
+    margin-top: 50px;
+    border-radius: 10px; 
+}
+
+h2{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+legend {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#formABM label, #formABM input, #formABM select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#formABM input[type="text"], #formABM select {
+    width: 100%;
+    padding: 5px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.input_ABM{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    border: none;
+    border-left: 2px solid #666;
+}
